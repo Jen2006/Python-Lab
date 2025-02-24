@@ -1,18 +1,18 @@
 person={"Name":"Jenisha","Age":18,"City":"Manglore","Hobbies":["sleeping","eating","yapping"]}
-#print(person)
+print(person)
 
-#print(person["Name"])
+print(person["Name"])
 
 person["Age"]=19
-#print(person)
+print(person)
 
 person['Age']=12
-#print(person)
+print(person)
 person["Name"]="Dhaiwik"
-#print(person)
+print(person)
 
-#for values in person.values():
-#print(values) 
+for values in person.values():
+ print(values) 
 
 
 del person["Hobbies"]
