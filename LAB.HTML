@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Simple Math Operations</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    <button onclick="calculate('+')">Addition (+)</button>
+    <button onclick="calculate('-')">Subtraction (-)</button>
+    <button onclick="calculate('*')">Multiplication (*)</button>
+    <button onclick="calculate('/')">Division (/)</button>
+    <h3>Result: <span id="result">---</span></h3>
+    <script>
+        function calculate(op) {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+    
+            if (isNaN(num1) || isNaN(num2)) {
+                result = 'Enter valid numbers';
+            } else if (op === '+') {
+                result = num1 + num2;
+            } else if (op === '-') {
+                result = num1 - num2;
+            } else if (op === '*') {
+                result = num1 * num2;
+            } else if (op === '/') {
+                result = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+            } else {
+                result = 'Invalid operation';
+            }
+    
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+    
+</body>
+</html>
